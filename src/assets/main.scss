@@ -1,0 +1,95 @@
+@use './reset.scss';
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+}
+header {
+  background-color: rgb(31, 45, 61);
+  color: white;
+}
+body {
+  position: relative;
+  z-index: 1;
+}
+body::before {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  filter: blur(9px);
+  background: url('@/assets/images/6.png') center center/cover no-repeat;
+  position: fixed;
+}
+a {
+  display: inline-block;
+  border: 2px solid gray;
+  border-radius: 10px;
+  background-color: #2d3d51;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+button {
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  font-size: 15px;
+  min-width: 150px;
+  line-height: 20px;
+  height: 40px;
+  border: 2px solid #409eff;
+  border-radius: 20px;
+  background-color: #409eff;
+  text-align: center;
+}
+button:hover {
+  border: 2px solid #0c72b1;
+  background-color: #0c72b1;
+}
+input {
+  border: none;
+  width: 280px;
+  height: 30px;
+  border-radius: 15px;
+  line-height: 30px;
+  font-size: 15px;
+  color: white;
+  padding-left: 2rem;
+  background-color: #409eff;
+  margin: 5px;
+}
+p {
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  margin: 5px 0;
+  background-color: skyblue;
+}
+#wrap {
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  h1 {
+    color: white;
+  }
+  img {
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    margin: 5px;
+  }
+}
+//路由文件选中a标签的背景颜色
+.router-link-active {
+  color: #3de713 !important;
+  border: 2px solid #0056b3;
+  background-color: #409eff;
+}

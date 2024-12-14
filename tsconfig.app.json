@@ -1,0 +1,25 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  /*-------------新增编译配置------------*/
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx"
+  ],
+  /*-------------新增编译配置------------*/
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    /*-------------新增编译配置------------*/
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "baseUrl": ".",
+    /*-------------新增编译配置------------*/
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
