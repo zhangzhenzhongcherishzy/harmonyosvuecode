@@ -19,10 +19,15 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/components/DeepDemo': RouteRecordInfo<'/components/DeepDemo', '/components/DeepDemo', Record<never, never>, Record<never, never>>,
+    '/components/StuDemoSon4': RouteRecordInfo<'/components/StuDemoSon4', '/components/StuDemoSon4', Record<never, never>, Record<never, never>>,
     '/StuDemo1': RouteRecordInfo<'/StuDemo1', '/StuDemo1', Record<never, never>, Record<never, never>>,
     '/StuDemo10': RouteRecordInfo<'/StuDemo10', '/StuDemo10', Record<never, never>, Record<never, never>>,
     '/StuDemo11': RouteRecordInfo<'/StuDemo11', '/StuDemo11', Record<never, never>, Record<never, never>>,
     '/StuDemo12': RouteRecordInfo<'/StuDemo12', '/StuDemo12', Record<never, never>, Record<never, never>>,
+    '/StuDemo13': RouteRecordInfo<'/StuDemo13', '/StuDemo13', Record<never, never>, Record<never, never>>,
+    '/StuDemo14': RouteRecordInfo<'/StuDemo14', '/StuDemo14', Record<never, never>, Record<never, never>>,
+    '/StuDemo15': RouteRecordInfo<'/StuDemo15', '/StuDemo15', Record<never, never>, Record<never, never>>,
+    '/StuDemo16': RouteRecordInfo<'/StuDemo16', '/StuDemo16', Record<never, never>, Record<never, never>>,
     '/StuDemo2': RouteRecordInfo<'/StuDemo2', '/StuDemo2', Record<never, never>, Record<never, never>>,
     '/StuDemo3': RouteRecordInfo<'/StuDemo3', '/StuDemo3', Record<never, never>, Record<never, never>>,
     '/StuDemo4': RouteRecordInfo<'/StuDemo4', '/StuDemo4', Record<never, never>, Record<never, never>>,

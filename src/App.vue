@@ -17,7 +17,10 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo10">内置指令</RouterLink>
         <RouterLink to="/StuDemo11">案例Tab切换</RouterLink>
         <RouterLink to="/StuDemo12">案例计算器</RouterLink>
-        <!-- 提交测试 -->
+        <RouterLink to="/StuDemo13">绑定 HTML class</RouterLink>
+        <RouterLink to="/StuDemo14">绑定内联样式 Style</RouterLink>
+        <RouterLink to="/StuDemo15">声明响应式状态 ref & reactive</RouterLink>
+        <RouterLink to="/StuDemo16">Reactive包装注意事项</RouterLink>
       </nav>
     </div>
   </header>
