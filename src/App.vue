@@ -25,7 +25,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo17">Proxy</RouterLink>
         <RouterLink to="/StuDemo18">Reactive Proxy</RouterLink>
         <RouterLink to="/StuDemo20">额外的 ref 解包细节</RouterLink>
-        <!-- 提交测试用例 -->
+        <!-- 提交测试 -->
       </nav>
     </div>
   </header>
