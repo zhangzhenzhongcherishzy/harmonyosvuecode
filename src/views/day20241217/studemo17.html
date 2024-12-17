@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrap"></div>
+    <script>
+        const obj = { name: "小明", age: 18 }
+        // const wrap = document.getElementById('wrap')
+        // console.log(wrap);
+        // wrap.textContent = obj.name
+        // //多次数据变更都需要进行 数据赋值
+        // obj.name = '123'
+        // wrap.textContent = obj.name
+
+        //proxy 代理 监控数据属性的变化  new proxy是一个构造函数
+        const p = new Proxy(obj, {
+            get(target, property, receiver) {//访问数据属性时，触发get函数
+                return obj[property]
+            },
+            set(target, property,value, receiver) {//设置数据属性时，触发set函数
+                obj[property] = value
+                wrap.textContent = obj.name
+            }
+        })
+        console.log(p.name);
+        p.age = 21
+        p.name = '111'
+        p.name = '222'
+        p.name = '333'
+    </script>
+</body>
+
+</html>

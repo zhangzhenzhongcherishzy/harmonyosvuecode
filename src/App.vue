@@ -21,6 +21,10 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo14">绑定内联样式 Style</RouterLink>
         <RouterLink to="/StuDemo15">声明响应式状态 ref & reactive</RouterLink>
         <RouterLink to="/StuDemo16">Reactive包装注意事项</RouterLink>
+        <RouterLink to="/StuDemo19">Reactive包装注意事项补充</RouterLink>
+        <RouterLink to="/StuDemo17">Proxy</RouterLink>
+        <RouterLink to="/StuDemo18">Reactive Proxy</RouterLink>
+        <RouterLink to="/StuDemo20">额外的 ref 解包细节</RouterLink>
       </nav>
     </div>
   </header>

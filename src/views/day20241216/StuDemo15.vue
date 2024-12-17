@@ -163,8 +163,8 @@ const editAllRefData2 = () => {// 替换reactive根级别的值   需要直接�
   console.log('aaaaa');
   dataObj2.count = 1;
   dataObj2.strArr[0] = '鸿蒙开发'
-  dataObj2.name = '小小'
-  dataObj2.sex = '女'
+  dataObj2.user.name = '小小'
+  dataObj2.user.sex = '女'
   // dataObj2 = {
   //   count: 2,
   //   strArr: ['鸿蒙开发', '刘强东', '码云', '蔡徐坤', '雷军', '任正非', '马化腾'],
