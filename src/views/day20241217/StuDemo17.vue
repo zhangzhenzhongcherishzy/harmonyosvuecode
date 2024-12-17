@@ -168,7 +168,7 @@ const p = new Proxy(obj, {
   },
 });
 
-p.age = 25; // 不能修改属性 age
+// p.age = 25; // 不能修改属性 age
 console.log(p.age); // 仍为 20
 
 </script>

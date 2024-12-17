@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+
 </script>
 <template>
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/StuDemo1">选项式API</RouterLink>
+        <RouterLink :to="{ path: '/StuDemo1' }">选项式API</RouterLink>
         <RouterLink to="/StuDemo2">组合式API</RouterLink>
         <RouterLink to="/StuDemo3">改造组合式API</RouterLink>
         <RouterLink to="/StuDemo4">组合式API-自定义渲染-返回函数</RouterLink>
@@ -25,11 +26,16 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo17">Proxy</RouterLink>
         <RouterLink to="/StuDemo18">Reactive Proxy</RouterLink>
         <RouterLink to="/StuDemo20">额外的 ref 解包细节</RouterLink>
-        <!-- 提交测试 -->
+        <RouterLink to="/StuDemo21">响应式 API:工具函数</RouterLink>
+        <RouterLink to="/StuDemo22">shallowReactive() & shallowReadonly()</RouterLink>
+        <RouterLink to="/StuDemo23">shallowRef() & triggerRef()</RouterLink>
+        <RouterLink to="/StuDemo24">toRaw() & markRaw()</RouterLink>
+        <RouterLink to="/StuDemo25">customRef()</RouterLink>
       </nav>
     </div>
   </header>
-  <RouterView />
+  <!-- <RouterView /> -->
+  <RouterView></RouterView>
 </template>
 
 <style scoped lang="scss"></style>

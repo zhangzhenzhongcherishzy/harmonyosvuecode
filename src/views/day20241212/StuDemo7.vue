@@ -22,7 +22,7 @@ import { ref, type Ref } from 'vue'
 import DeepDemo from './components/DeepDemo.vue'
 
 // setup中访问this是undefined。
-console.log(this) // undefined
+// console.log(this) // undefined
 
 interface IUser {
   username: string
