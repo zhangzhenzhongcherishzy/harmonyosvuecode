@@ -13,8 +13,12 @@
 <script lang="ts" setup>
 import { ref, type Ref, effectScope, EffectScope, onScopeDispose } from 'vue'
 
+interface ClassB {
+  time: Ref<number>;
+  scope: EffectScope;
+}
 // 创建一个计时器的组合函数
-function useTimer(): { time: Ref<number>; scope: EffectScope } {
+function useTimer():ClassB {
   const time = ref(0)
   let interval: ReturnType<typeof setInterval>
   // 使用 effectScope 创建作用域
@@ -33,11 +37,12 @@ function useTimer(): { time: Ref<number>; scope: EffectScope } {
   return { time, scope }
 }
 // 管理多个计时器
-const timers = ref<{ time: Ref<number>; scope: EffectScope }[]>([])
+type TimesRef = Ref<ClassB[]>;
+const timers:TimesRef = ref([])
 // 创建新计时器
 function createTimer() {
   const newTimer = useTimer()
-  // timers.value.push(newTimer as { time: Ref<number>; scope: EffectScope })
+  console.log(newTimer);
   timers.value.push(newTimer)
 }
 // 移除计时器并清理作用域
