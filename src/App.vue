@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-
+// const route = useRoute(); // 当前路由
 </script>
 <template>
   <header>
@@ -31,11 +31,19 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo23">shallowRef() & triggerRef()</RouterLink>
         <RouterLink to="/StuDemo24">toRaw() & markRaw()</RouterLink>
         <RouterLink to="/StuDemo25">customRef()</RouterLink>
+        <RouterLink to="/StuDemo26"
+          >effectScope() & getCurrentScope() & onScopeDispose() 案例1</RouterLink
+        >
+        <RouterLink to="/StuDemo27">改造effectScope渲染数据</RouterLink>
+        <RouterLink to="/StuDemo28">effectScope案例2</RouterLink>
+        <RouterLink to="/StuDemo29">effectScope案例3</RouterLink>
+        <RouterLink to="/StuDemo30">effectScope案例4</RouterLink>
       </nav>
     </div>
   </header>
-  <!-- <RouterView /> -->
-  <RouterView></RouterView>
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style scoped lang="scss"></style>

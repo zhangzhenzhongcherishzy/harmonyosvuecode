@@ -26,9 +26,9 @@ const router = createRouter({
 //   history: createWebHistory(import.meta.env.BASE_URL),
 //   routes: [
 //     {
-//       path: '/',
+//       path: '/StuDemo1',
 //       name: 'dayStuDemo1',
-//       component: StuDemo1,
+//       component:() => import('@/views/day20241211/StuDemo1.vue')  ,
 //     },
 //     {
 //       path: '/StuDemo2',

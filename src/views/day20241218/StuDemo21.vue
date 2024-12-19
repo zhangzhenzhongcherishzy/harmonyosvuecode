@@ -136,7 +136,7 @@ console.log(newdataObj3.user, 'newdataObj3.user')
 
 /*-------------------------------toRefs: 将一个响应式对象的所有属性转换为独立的 ref 对象；ref初始值的时候用 toRef()-------------------------------- */
 const state1 = reactive({ foo: 1, bar: 2 })
-const { foo, bar } = toRefs(state)
+const { foo, bar } = toRefs(state1)
 console.log(foo.value, bar.value) // 1  2
 foo.value = 100
 bar.value = 200
