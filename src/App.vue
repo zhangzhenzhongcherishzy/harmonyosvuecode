@@ -27,17 +27,19 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo18">Reactive Proxy</RouterLink>
         <RouterLink to="/StuDemo20">额外的 ref 解包细节</RouterLink>
         <RouterLink to="/StuDemo21">响应式 API:工具函数</RouterLink>
-        <RouterLink to="/StuDemo22">shallowReactive() & shallowReadonly()</RouterLink>
-        <RouterLink to="/StuDemo23">shallowRef() & triggerRef()</RouterLink>
-        <RouterLink to="/StuDemo24">toRaw() & markRaw()</RouterLink>
-        <RouterLink to="/StuDemo25">customRef()</RouterLink>
-        <RouterLink to="/StuDemo26"
-          >effectScope() & getCurrentScope() & onScopeDispose() 案例1</RouterLink
-        >
+        <RouterLink to="/StuDemo22">shallowReactive& shallowReadonly</RouterLink>
+        <RouterLink to="/StuDemo23">shallowRef& triggerRef()</RouterLink>
+        <RouterLink to="/StuDemo24">toRaw& markRaw</RouterLink>
+        <RouterLink to="/StuDemo25">customRef</RouterLink>
+        <RouterLink to="/StuDemo26">effectScope&getCurrentScope& onScopeDispose案例1</RouterLink>
         <RouterLink to="/StuDemo27">改造effectScope渲染数据</RouterLink>
         <RouterLink to="/StuDemo28">effectScope案例2</RouterLink>
         <RouterLink to="/StuDemo29">effectScope案例3</RouterLink>
         <RouterLink to="/StuDemo30">effectScope案例4</RouterLink>
+        <RouterLink to="/StuDemo31">计算属性</RouterLink>
+        <RouterLink to="/StuDemo32">侦听器</RouterLink>
+        <RouterLink to="/StuDemo33">侦听模拟求情数据</RouterLink>
+        <RouterLink to="/StuDemo34">侦听数据源类型</RouterLink>
       </nav>
     </div>
   </header>
