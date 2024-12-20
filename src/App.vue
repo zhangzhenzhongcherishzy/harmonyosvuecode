@@ -37,9 +37,10 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo29">effectScope案例3</RouterLink>
         <RouterLink to="/StuDemo30">effectScope案例4</RouterLink>
         <RouterLink to="/StuDemo31">计算属性</RouterLink>
-        <RouterLink to="/StuDemo32">侦听器</RouterLink>
-        <RouterLink to="/StuDemo33">侦听模拟求情数据</RouterLink>
-        <RouterLink to="/StuDemo34">侦听数据源类型</RouterLink>
+        <RouterLink to="/StuDemo32">侦听器watch</RouterLink>
+        <RouterLink to="/StuDemo33">侦听模拟请求数据</RouterLink>
+        <RouterLink to="/StuDemo34">侦听器watchEffect</RouterLink>
+        <RouterLink to="/StuDemo35">侦听器使用场景</RouterLink>
       </nav>
     </div>
   </header>

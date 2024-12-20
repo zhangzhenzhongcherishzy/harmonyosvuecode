@@ -1,6 +1,6 @@
 <!--
 !安装依赖：
-  pnpm install lodash  代码中涉及debounce方法，这是一个防抖函数，用于限制高频事件的触发。
+  pnpm install lodash防抖函数，用于限制高频事件的触发。
   pnpm/cnpm i --save-dev @types/lodash
   pnpm install @types/lodash --save-dev
 -->

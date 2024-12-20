@@ -98,7 +98,7 @@ const user = reactive({
 
 // 只读计算属性
 const fullName = computed(() => {
-  console.log('触发计算');
+  console.log('触发计算')
 
   return `${user.firstName} ${user.lastName}`
 })
