@@ -41,6 +41,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo33">侦听模拟请求数据</RouterLink>
         <RouterLink to="/StuDemo34">侦听器watchEffect</RouterLink>
         <RouterLink to="/StuDemo35">侦听器使用场景</RouterLink>
+        <RouterLink to="/StuDemo36">案例-学生成绩管理系统</RouterLink>
       </nav>
     </div>
   </header>
