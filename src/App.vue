@@ -42,6 +42,10 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo34">侦听器watchEffect</RouterLink>
         <RouterLink to="/StuDemo35">侦听器使用场景</RouterLink>
         <RouterLink to="/StuDemo36">案例-学生成绩管理系统</RouterLink>
+        <RouterLink to="/StuDemo37">组件注册和引入</RouterLink>
+        <RouterLink to="/StuDemo38">组件传值 props</RouterLink>
+        <RouterLink to="/StuDemo39">props泛型参数</RouterLink>
+        <RouterLink to="/StuDemo40">组件事件emit</RouterLink>
       </nav>
     </div>
   </header>
