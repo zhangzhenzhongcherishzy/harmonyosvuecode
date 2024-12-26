@@ -46,6 +46,9 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo38">组件传值 props</RouterLink>
         <RouterLink to="/StuDemo39">props泛型参数</RouterLink>
         <RouterLink to="/StuDemo40">组件事件emit</RouterLink>
+        <RouterLink to="/StuDemo41">插槽Slot</RouterLink>
+        <RouterLink to="/StuDemo42">插槽Slot演示</RouterLink>
+        <RouterLink to="/StuDemo43">插槽案例</RouterLink>
       </nav>
     </div>
   </header>
