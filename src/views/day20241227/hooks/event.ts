@@ -1,23 +1,14 @@
-import { ref,onMounted, onUnmounted } from "vue"
+//第二种，方法独立封装
+import { onMounted, onUnmounted } from 'vue';
 
+//EventTarget 是 DOM 元素、文档、窗口等的通用接口
 
-
-export function useEvent(target: any, event: any, callback: any) {
-  // 一个组合式函数也可以挂靠在所属组件的生命周期上
-  // 来启动和卸载副作用
-  onMounted(() => target.addEventListener(event, callback))
-  onUnmounted(() => target.removeEventListener(event, callback))
+export function useEvent<T extends Event>(
+  target: EventTarget,
+  event: string,
+  callback: (event: T) => void,
+) {
+  //一个组合式函数也可以挂靠在所属组件的生命周期上,启动和卸载副作用
+  onMounted(() => target.addEventListener(event, callback as EventListener));
+  onUnmounted(() => target.removeEventListener(event, callback as EventListener));
 }
-
-
-// export function useMouse() {
-//   const x = ref(0)
-//   const y = ref(0)
-//   function update(event:any) {
-//     x.value = event.pageX
-//     y.value = event.pageY
-//   }
-//   onMounted(() => window.addEventListener('mousemove', update))
-//   onUnmounted(() => window.removeEventListener('mousemove', update))
-//   return { x, y }
-// }
