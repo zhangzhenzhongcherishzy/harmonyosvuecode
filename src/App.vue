@@ -50,6 +50,8 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo42">插槽Slot演示</RouterLink>
         <RouterLink to="/StuDemo43">插槽案例</RouterLink>
         <RouterLink to="/StuDemo44">组合式 API：生命周期钩子</RouterLink>
+        <RouterLink to="/StuDemo45">组件 v-model</RouterLink>
+        <RouterLink to="/StuDemo46">组合式函数</RouterLink>
       </nav>
     </div>
   </header>
