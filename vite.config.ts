@@ -28,6 +28,7 @@ export default defineConfig({
         'src/views/day20241225',
         'src/views/day20241226',
         'src/views/day20241227',
+        'src/views/day20241228',
       ], // 指定路由文件所在的目录
       // routesFolder: 'src/views', // 指定路由文件所在的目录
       extensions: ['.vue', '.jsx'],

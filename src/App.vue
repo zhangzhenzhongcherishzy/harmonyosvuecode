@@ -52,6 +52,10 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/StuDemo44">组合式 API：生命周期钩子</RouterLink>
         <RouterLink to="/StuDemo45">组件 v-model</RouterLink>
         <RouterLink to="/StuDemo46">组合式函数</RouterLink>
+        <RouterLink to="/StuDemo47">案例-学生成绩管理系统2</RouterLink>
+        <RouterLink to="/StuDemo48">案例-学生成绩管理系统3</RouterLink>
+        <RouterLink to="/StuDemo49">defineExpose</RouterLink>
+        <RouterLink to="/StuDemo50">購物車</RouterLink>
       </nav>
     </div>
   </header>
