@@ -36,14 +36,7 @@
 </template>
 
 <script setup lang="ts">
-
-/*
-核心作用
-  toValue 的主要目的是处理两种情况：
-    1、如果传入的是一个 ref，它会返回 ref.value。
-    2、如果传入的是一个普通值或 getter 函数，它会直接返回值。
-*/
-import { ref, toValue, watch } from 'vue'
+import { ref} from 'vue'
 
 /*------------------------定义数据接口------------------------- */
 export interface IStudent {
@@ -80,18 +73,33 @@ const saveStuInfo = () => {
   emit('save', formData.value as IStudent)
 }
 
-/*------------------------使用监听器，监听数据变化------------------------- */
-watch(
-  () => toValue(userInfo),
-  () => {
-    formData.value = userInfo
-    console.log(userInfo, 'watch:props.userInfo')
-  },
-)
+/*------------------------设置表单数据------------------------- */
+const setFormData = (data: IStudent) => {
+  formData.value = data
+}
+
+/*------------------------重置表单数据------------------------- */
+const resetForm = () => {
+  setFormData({
+    id: '',
+    age: '',
+    email: '',
+    gender: '',
+    hobbies: '',
+    name: '',
+    phone: ''
+  })
+}
+
+/*------------------------子组件暴露了setFormData、resetForm方法------------------------- */
+defineExpose({
+  setFormData,
+  resetForm
+})
 </script>
 
 <style lang="scss">
-@use '../style/StuDemo47.scss';
+@use '../style/StuDemo48.scss';
 label {
   display: block;
   margin-bottom: 5px;
@@ -100,7 +108,6 @@ label {
 
 input,
 select {
-  // width: 100%;
   padding: 8px;
   margin-bottom: 15px;
   border: 1px solid #ccc;

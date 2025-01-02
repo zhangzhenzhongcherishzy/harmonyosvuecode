@@ -80,7 +80,7 @@ body {
 }
 input {
   border: none;
-  width: 280px;
+  // width: 280px;
   height: 30px;
   border-radius: 15px;
   line-height: 30px;

@@ -1,7 +1,7 @@
 <template>
   <div id="wrap">
-    <h1>案例-学生成绩管理系统2(父传子，子传父回传处理)</h1>
-    <div class="main">
+    <h1>案例-学生成绩管理系统3(访问模板引用ref&组件暴漏defineExpose())</h1>
+    <div class="mains">
       <div class="overview">班级平均年龄: {{ avgAge }}</div>
 
       <div class="tools-header">
@@ -71,11 +71,15 @@
       </table>
 
       <!-- Modal for adding/editing students -->
-      <div v-show="isShowModel" class="studentModal modal" @click="closeModel">
+      <div v-show="isShowModel" class="studentModal modals" @click="closeModel">
         <div class="modal-content" @click.stop>
           <h3 class="modalTitle">{{ modelInfo.title }}</h3>
 
-          <UserInfoForm :user-info="stuFormData" @save="saveStuInfo"></UserInfoForm>
+          <UserInfoForm
+            ref="userInfoFormRef"
+            :user-info="stuFormData"
+            @save="saveStuInfo"
+          ></UserInfoForm>
         </div>
       </div>
     </div>
@@ -83,14 +87,18 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, useTemplateRef } from 'vue'
 import { getNowDateTime } from '@/utils'
 import { uniqueId } from 'lodash'
+
 /*---------------------------组件导入------------------------------ */
-import UserInfoForm from './components/StuDemo47userInfoForm.vue'
+import UserInfoForm from './components/StuDemo48userInfoForm.vue'
 
 /*---------------------------接口导入------------------------------ */
-import { type IStudent } from './components/StuDemo47userInfoForm.vue'
+import { type IStudent } from './components/StuDemo48userInfoForm.vue'
+
+/*---------------------------调用子组件暴露的方法------------------------------ */
+const userInfoFormRef = useTemplateRef('userInfoFormRef')
 
 /*---------------------------弹窗开关控制------------------------------ */
 const isShowModel = ref(false)
@@ -161,8 +169,9 @@ const saveStuInfo = (userInfo: IStudent) => {
   stuFormData.value = userInfo
   // 判断是修改还是添加
   if (modelInfo.value.type === 'add') {
-    // 添加学生信息1.生成学生id  2.把新的学生信息追加到学生数组中
+    // 添加学生信息1.生成学生id2.把新的学生信息追加到学生数组中
     stuFormData.value.id = uniqueId('newstu_')
+    console.log(stuFormData.value)
     studentArr.push({
       ...JSON.parse(JSON.stringify(stuFormData.value)),
       create_at: getNowDateTime(),
@@ -177,12 +186,15 @@ const saveStuInfo = (userInfo: IStudent) => {
   }
   generateSearchData()
   changeSeletedItem()
+  console.log(studentArr)
   // 关闭模态框
   closeModel()
 }
 
 /*---------------------------添加学生信息------------------------------ */
 const addStudent = () => {
+  // 重置表单数据
+  userInfoFormRef.value?.resetForm()
   stuFormData.value = {
     id: 1,
     name: '小明',
@@ -204,6 +216,7 @@ const delStuInfo = (item: IStudent) => {
   generateSearchData()
   changeSeletedItem()
 }
+
 /*---------------------------删除选中学生------------------------------ */
 const delSelectedStudent = () => {
   searchStudentArr.value.forEach((i) => {
@@ -217,7 +230,11 @@ const delSelectedStudent = () => {
 const editStuInfo = (stu: IStudent) => {
   modelInfo.value.type = 'edit'
   modelInfo.value.title = '修改学生信息'
-  stuFormData.value = JSON.parse(JSON.stringify(stu))
+  //stuFormData.value = JSON.parse(JSON.stringify(stu))
+
+  //使用引用模版暴漏的setFromData方法重置子组件的表单数据
+  userInfoFormRef.value?.setFormData(JSON.parse(JSON.stringify(stu)))
+
   isShowModel.value = true
 }
 
@@ -225,14 +242,15 @@ const editStuInfo = (stu: IStudent) => {
 const keyword = ref('')
 // 绑定数据变量(初始化)
 const searchStudentArr = ref<Array<IStudent>>([])
+// 检索数据
 const generateSearchData = () => {
   searchStudentArr.value = studentArr.filter((i) => i.name.includes(keyword.value))
 }
 
 /*---------------------------全选不全选功能------------------------------ */
-// 是否全选开关
+// 是否全选
 const isAllSelected = ref(false)
-// 全选不全选
+// 全选全不选
 const changeSelectedAll = (event: Event) => {
   const checked = (event.target as HTMLInputElement).checked
   if (checked) {
@@ -253,14 +271,14 @@ const changeSeletedItem = () => {
     isAllSelected.value = false
   }
 }
+
 /*---------------------------初始化------------------------------ */
 const initAction = () => {
   generateSearchData()
 }
-/*---------------------------调用初始化函数------------------------------ */
 initAction()
 </script>
 
 <style lang="scss">
-@use './style/StuDemo47.scss';
+@use './style/StuDemo48.scss';
 </style>

@@ -117,11 +117,4 @@ const fullName1 = computed({
 </script>
 
 <style lang="scss">
-/* 添加一些样式 */
-h1 {
-  color: #333;
-}
-p {
-  margin: 8px 0;
-}
 </style>

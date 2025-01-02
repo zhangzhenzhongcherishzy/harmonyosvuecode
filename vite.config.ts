@@ -13,6 +13,7 @@ export default defineConfig({
   plugins: [
     VueRouter({
       routesFolder: [
+        'src/views',
         'src/views/day20241211',
         'src/views/day20241212',
         'src/views/day20241213',
@@ -28,7 +29,9 @@ export default defineConfig({
         'src/views/day20241225',
         'src/views/day20241226',
         'src/views/day20241227',
-        'src/views/day20241228',
+        'src/views/day20241230',
+        'src/views/day20241231',
+        'src/views/day20250102',
       ], // 指定路由文件所在的目录
       // routesFolder: 'src/views', // 指定路由文件所在的目录
       extensions: ['.vue', '.jsx'],

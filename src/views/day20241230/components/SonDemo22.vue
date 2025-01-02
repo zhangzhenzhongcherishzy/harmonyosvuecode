@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { defineExpose  } from 'vue'
-
 // export type SonDemo22Instance = ComponentPublicInstance<{
 //   childMethod: (arg: string) => void;
 //   resetData: () => void;

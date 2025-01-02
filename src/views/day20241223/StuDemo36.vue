@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="main">
+    <div class="mains">
       <div class="overview">班级平均年龄: {{ avgAge }}</div>
 
       <div class="tools-header">
@@ -70,7 +70,7 @@
       </table>
 
       <!-- Modal for adding/editing students -->
-      <div v-show="isShowModel" class="studentModal modal" @click="closeModel">
+      <div v-show="isShowModel" class="studentModal modals" @click="closeModel">
         <div class="modal-content" @click.stop>
           <h3 class="modalTitle">{{ modelInfo.title }}</h3>
           <form class="studentForm">
@@ -339,6 +339,6 @@ const avgAge = computed(() => {
 initAction()
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use './style/StuDemo36.scss';
 </style>
