@@ -184,16 +184,11 @@ declare module 'vue-router/auto-routes' {
     '/StuDemo5': RouteRecordInfo<'/StuDemo5', '/StuDemo5', Record<never, never>, Record<never, never>>,
     '/StuDemo50': RouteRecordInfo<'/StuDemo50', '/StuDemo50', Record<never, never>, Record<never, never>>,
     '/StuDemo51': RouteRecordInfo<'/StuDemo51', '/StuDemo51', Record<never, never>, Record<never, never>>,
-    '/StuDemo52': RouteRecordInfo<'/StuDemo52', '/StuDemo52', Record<never, never>, Record<never, never>>,
     '/StuDemo53': RouteRecordInfo<'/StuDemo53', '/StuDemo53', Record<never, never>, Record<never, never>>,
     '/StuDemo54': RouteRecordInfo<'/StuDemo54', '/StuDemo54', Record<never, never>, Record<never, never>>,
     '/StuDemo6': RouteRecordInfo<'/StuDemo6', '/StuDemo6', Record<never, never>, Record<never, never>>,
     '/StuDemo7': RouteRecordInfo<'/StuDemo7', '/StuDemo7', Record<never, never>, Record<never, never>>,
     '/StuDemo8': RouteRecordInfo<'/StuDemo8', '/StuDemo8', Record<never, never>, Record<never, never>>,
     '/StuDemo9': RouteRecordInfo<'/StuDemo9', '/StuDemo9', Record<never, never>, Record<never, never>>,
-    '/studyrouter/demo1': RouteRecordInfo<'/studyrouter/demo1', '/studyrouter/demo1', Record<never, never>, Record<never, never>>,
-    '/studyrouter/sdchildren/detail1': RouteRecordInfo<'/studyrouter/sdchildren/detail1', '/studyrouter/sdchildren/detail1', Record<never, never>, Record<never, never>>,
-    '/studyrouter/sdchildren/detail2': RouteRecordInfo<'/studyrouter/sdchildren/detail2', '/studyrouter/sdchildren/detail2', Record<never, never>, Record<never, never>>,
-    '/studyrouter/sdchildren/detail3': RouteRecordInfo<'/studyrouter/sdchildren/detail3', '/studyrouter/sdchildren/detail3', Record<never, never>, Record<never, never>>,
   }
 }

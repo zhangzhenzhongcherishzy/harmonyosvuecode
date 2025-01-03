@@ -394,44 +394,6 @@ const routesday20250102: Array<RouteRecordRaw> = [
   },
 ]
 
-import srDemo1 from '../views/studyrouter/demo1.vue'
-// studyrouter-children
-import srDetail1 from '../views/studyrouter/sdchildren/detail1.vue'
-import srDetail2 from '../views/studyrouter/sdchildren/detail2.vue'
-import srDetail3 from '../views/studyrouter/sdchildren/detail3.vue'
-const studyRouter = [
-  {
-    name: 'srDemo1',
-    path: '/srDemo1',
-    component: srDemo1,
-    title: '嵌套路由',
-    // redirect: '/', 重定向
-    children: [
-      {
-        name: 'xiang1',
-        path: 'detail1',
-        component: srDetail1
-      },
-      {
-        name: 'xiang2',
-        path: 'detail2/:title/:content',
-        component: srDetail2,
-        props: true
-      },
-      {
-        name: 'defaultp',
-        path: 'user/:id',
-        components: { default: srDetail1, sidebar: srDetail2 },
-        props: { default: true, sidebar: true }
-      },
-      {
-        name: 'xiang3',
-        path: 'detail3',
-        component: srDetail3
-      }
-    ]
-  }
-]
 
 //配置主页
 import HomeView from '@/views/HomeView.vue'
@@ -477,7 +439,6 @@ export const routerList = [
   ...routesday20241230,
   ...routesday20241231,
   ...routesday20250102,
-  ...studyRouter,
 ]
 //注册路由
 const router = createRouter({
@@ -486,16 +447,15 @@ const router = createRouter({
 })
 
 //全局路由守卫
-router.beforeEach((to, from, next) => {
-  const isAuthenticated = localStorage.getItem('token') === 'true'
-  // 检查目标路由是否需要认证
-  if (to.meta.requiresAuth && isAuthenticated) {
-    alert('请先登录！')
-    next('/') // 未登录，跳转到登录页
-  } else {
-    next() // 不需要认证的路由直接放行
-  }
-})
+// router.beforeEach((to, from, next) => {
+//   const isAuthenticated = localStorage.getItem('token') === 'true'
+//   if (to.meta.requiresAuth && isAuthenticated) {
+//     alert('请先登录！')
+//     next('/') // 未登录，跳转到登录页
+//   } else {
+//     next() // 不需要认证的路由直接放行
+//   }
+// })
 
 // 自动路由配置
 // import { createRouter, createWebHistory  } from 'vue-router'
