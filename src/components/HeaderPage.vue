@@ -57,6 +57,7 @@
         <RouterLink to="/StuDemo51">使用内置的 fetch API 进行请求</RouterLink>
         <RouterLink to="/StuDemo53">嵌套路由(子路由)</RouterLink>
         <RouterLink to="/StuDemo54">动态路由</RouterLink>
+        <RouterLink to="/SrDemo1">路由导航</RouterLink>
       </nav>
     </div>
   </header>

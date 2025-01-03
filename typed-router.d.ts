@@ -132,7 +132,6 @@ declare module 'vue-router/auto-routes' {
     '/day20250102/components/StuDemo53Son1': RouteRecordInfo<'/day20250102/components/StuDemo53Son1', '/day20250102/components/StuDemo53Son1', Record<never, never>, Record<never, never>>,
     '/day20250102/components/StuDemo53Son2': RouteRecordInfo<'/day20250102/components/StuDemo53Son2', '/day20250102/components/StuDemo53Son2', Record<never, never>, Record<never, never>>,
     '/day20250102/components/StuDemo54Son1': RouteRecordInfo<'/day20250102/components/StuDemo54Son1', '/day20250102/components/StuDemo54Son1', Record<never, never>, Record<never, never>>,
-    '/day20250102/StuDemo52': RouteRecordInfo<'/day20250102/StuDemo52', '/day20250102/StuDemo52', Record<never, never>, Record<never, never>>,
     '/day20250102/StuDemo53': RouteRecordInfo<'/day20250102/StuDemo53', '/day20250102/StuDemo53', Record<never, never>, Record<never, never>>,
     '/day20250102/StuDemo54': RouteRecordInfo<'/day20250102/StuDemo54', '/day20250102/StuDemo54', Record<never, never>, Record<never, never>>,
     '/HomeView': RouteRecordInfo<'/HomeView', '/HomeView', Record<never, never>, Record<never, never>>,
@@ -192,5 +191,9 @@ declare module 'vue-router/auto-routes' {
     '/StuDemo7': RouteRecordInfo<'/StuDemo7', '/StuDemo7', Record<never, never>, Record<never, never>>,
     '/StuDemo8': RouteRecordInfo<'/StuDemo8', '/StuDemo8', Record<never, never>, Record<never, never>>,
     '/StuDemo9': RouteRecordInfo<'/StuDemo9', '/StuDemo9', Record<never, never>, Record<never, never>>,
+    '/studyrouter/demo1': RouteRecordInfo<'/studyrouter/demo1', '/studyrouter/demo1', Record<never, never>, Record<never, never>>,
+    '/studyrouter/sdchildren/detail1': RouteRecordInfo<'/studyrouter/sdchildren/detail1', '/studyrouter/sdchildren/detail1', Record<never, never>, Record<never, never>>,
+    '/studyrouter/sdchildren/detail2': RouteRecordInfo<'/studyrouter/sdchildren/detail2', '/studyrouter/sdchildren/detail2', Record<never, never>, Record<never, never>>,
+    '/studyrouter/sdchildren/detail3': RouteRecordInfo<'/studyrouter/sdchildren/detail3', '/studyrouter/sdchildren/detail3', Record<never, never>, Record<never, never>>,
   }
 }

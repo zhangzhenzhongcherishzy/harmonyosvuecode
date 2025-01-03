@@ -394,8 +394,45 @@ const routesday20250102: Array<RouteRecordRaw> = [
   },
 ]
 
-//配置404页面
-import StuDemo52 from '@/views/day20250102/StuDemo52.vue'
+import srDemo1 from '../views/studyrouter/demo1.vue'
+// studyrouter-children
+import srDetail1 from '../views/studyrouter/sdchildren/detail1.vue'
+import srDetail2 from '../views/studyrouter/sdchildren/detail2.vue'
+import srDetail3 from '../views/studyrouter/sdchildren/detail3.vue'
+const studyRouter = [
+  {
+    name: 'srDemo1',
+    path: '/srDemo1',
+    component: srDemo1,
+    title: '嵌套路由',
+    // redirect: '/', 重定向
+    children: [
+      {
+        name: 'xiang1',
+        path: 'detail1',
+        component: srDetail1
+      },
+      {
+        name: 'xiang2',
+        path: 'detail2/:title/:content',
+        component: srDetail2,
+        props: true
+      },
+      {
+        name: 'defaultp',
+        path: 'user/:id',
+        components: { default: srDetail1, sidebar: srDetail2 },
+        props: { default: true, sidebar: true }
+      },
+      {
+        name: 'xiang3',
+        path: 'detail3',
+        component: srDetail3
+      }
+    ]
+  }
+]
+
 //配置主页
 import HomeView from '@/views/HomeView.vue'
 //配置登录页
@@ -410,12 +447,6 @@ export const routerList = [
     name: 'HomeView',
     component: HomeView,
     // meta: { requiresAuth: true }, // 需要登录的路由
-  },
-  //配置404页面
-  {
-    path: '/:pathMatch(.*)*', // 使用正则表达式捕获所有未匹配路径
-    name: 'dayStuDemo52',
-    component: StuDemo52,
   },
   //配置登录页
   {
@@ -446,6 +477,7 @@ export const routerList = [
   ...routesday20241230,
   ...routesday20241231,
   ...routesday20250102,
+  ...studyRouter,
 ]
 //注册路由
 const router = createRouter({
