@@ -28,6 +28,7 @@ export const setupPermission = () => {
         if (whiteList.includes(to.path)) {
           next()
         } else {
+          // next('/LoginView')
           redirectToLogin(to, next)
         }
       }

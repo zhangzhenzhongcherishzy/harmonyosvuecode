@@ -7,7 +7,7 @@ import App from './App.vue'
 import router from './router'
 
 //如果没有特别指明文件名，默认导入的是 plugins/index 文件（如果存在）
-// import setupPlugins from "@/plugins";
+import setupPlugins from "@/plugins";
 
 //全局组件的导入StuDemo4
 import StuDemo4 from '@/views/day20241212/StuDemo4.vue';
@@ -48,6 +48,6 @@ app.component('StuDemo4', StuDemo4)
 
 app.use(createPinia())
 app.use(router)
-// app.use(setupPlugins);
+app.use(setupPlugins);
 
 app.mount('#app')

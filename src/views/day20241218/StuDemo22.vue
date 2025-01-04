@@ -39,8 +39,8 @@ isProxy	              用于判断数据是否为 Vue 代理，调试或某些�
     </ul>
     <hr />
 
-    <button @click="updata()">手动更新</button>
-    <p>{{ num }}</p>
+    <!-- <button @click="updata()">手动更新</button> -->
+    <!-- <p>{{ num }}</p> -->
   </div>
 </template>
 
@@ -51,7 +51,9 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { isProxy, shallowReactive, shallowReadonly, triggerRef, ref, type Ref } from 'vue'
+import { isProxy, shallowReactive, shallowReadonly, triggerRef, ref } from 'vue'
+
+console.log(ref,triggerRef);
 
 const dataObj3 = {
   count: 0,
