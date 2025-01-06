@@ -7,7 +7,6 @@ export const useCounterStore = defineStore('counter', () => {
   function increment() {
     count.value++
   }
-
   return { count, doubleCount, increment }
 })
 
@@ -43,13 +42,8 @@ export const useStoreone = defineStore('counterone', {
     // },
   },
   persist: {
-    enabled: true,
-    strategies: [
-      {
-        key: 'userStore',
-        storage: localStorage,
-      },
-    ],
+    key: 'userStore',
+    storage: localStorage,
   },
 })
 
