@@ -58,6 +58,8 @@
         <RouterLink to="/StuDemo53">嵌套路由(子路由)</RouterLink>
         <RouterLink to="/StuDemo54">动态路由</RouterLink>
         <RouterLink to="/StuDemo55">路由元信息</RouterLink>
+        <RouterLink to="/StuDemo56">状态管理Pinia</RouterLink>
+        <RouterLink to="/StuDemo56">Pinia进阶</RouterLink>
       </nav>
     </div>
   </header>

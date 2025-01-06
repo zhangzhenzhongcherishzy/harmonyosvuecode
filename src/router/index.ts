@@ -411,6 +411,20 @@ const routesday20250104: Array<RouteRecordRaw> = [
   },
 ]
 
+// day20250106
+const routesday20250106: Array<RouteRecordRaw> = [
+  {
+    path: '/StuDemo56',
+    name: 'dayStuDemo56',
+    component: () => import('@/views/day20250106/StuDemo56.vue'), // 按需加载
+  },
+  {
+    path: '/StuDemo57',
+    name: 'dayStuDemo57',
+    component: () => import('@/views/day20250106/StuDemo57.vue'), // 按需加载
+  },
+]
+
 //配置主页
 import HomeView from '@/views/HomeView.vue'
 //配置登录页
@@ -458,6 +472,7 @@ export const routerList = [
   ...routesday20241231,
   ...routesday20250102,
   ...routesday20250104,
+  ...routesday20250106,
 ]
 //注册路由
 const router = createRouter({
@@ -465,16 +480,26 @@ const router = createRouter({
   routes: routerList,
 })
 
-//全局路由守卫
+//配置全局守卫
 // router.beforeEach((to, from, next) => {
-//   const isAuthenticated = localStorage.getItem('token') === 'true'
-//   if (to.meta.requiresAuth && isAuthenticated) {
-//     alert('请先登录！')
-//     next('/') // 未登录，跳转到登录页
+//   const istrue = localStorage.getItem('token');
+//   if (istrue) {
+//     //已经登录
+//     if (to.path === '/LoginView') {
+//       next();
+//     } else {
+//       next();
+//     }
 //   } else {
-//     next() // 不需要认证的路由直接放行
+//     //没有登录情况
+//     if (to.path === '/LoginView' || to.path === '/RegisterView') {
+//       next();
+//     } else {
+//       alert('未登录，请先登录账号');
+//       next('/LoginView');
+//     }
 //   }
-// })
+// });
 
 // 自动路由配置
 // import { createRouter, createWebHistory  } from 'vue-router'
