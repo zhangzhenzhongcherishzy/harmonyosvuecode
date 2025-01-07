@@ -54,12 +54,14 @@
         <RouterLink to="/StuDemo48">案例-学生成绩管理系统3</RouterLink>
         <RouterLink to="/StuDemo49">defineExpose</RouterLink>
         <RouterLink to="/StuDemo50">購物車</RouterLink>
-        <RouterLink to="/StuDemo51">使用内置的 fetch API 进行请求</RouterLink>
+        <RouterLink to="/StuDemo51">使用内置的 fetchAPI进行请求</RouterLink>
         <RouterLink to="/StuDemo53">嵌套路由(子路由)</RouterLink>
         <RouterLink to="/StuDemo54">动态路由</RouterLink>
         <RouterLink to="/StuDemo55">路由元信息</RouterLink>
         <RouterLink to="/StuDemo56">状态管理Pinia</RouterLink>
-        <RouterLink to="/StuDemo56">Pinia进阶</RouterLink>
+        <RouterLink to="/StuDemo57">Pinia进阶</RouterLink>
+        <RouterLink to="/StuDemo58">使用内置的fetchAPI进行请求</RouterLink>
+        <RouterLink to="/StuDemo59">axios安装和使用</RouterLink>
       </nav>
     </div>
   </header>

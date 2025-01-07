@@ -6,9 +6,8 @@ body,
   height: 100%;
 }
 header {
+  background-color: rgb(31, 45, 61);
   color: white;
-  border-radius: 20px;
-  border: 2px solid rgba(255, 255, 255,0.5);
 }
 body {
   position: relative;
@@ -30,10 +29,11 @@ a {
   display: inline-block;
   border: 2px solid gray;
   border-radius: 10px;
-  background-color: #409eff;
+  background-color: #2d3d51;
   padding: 5px;
   margin: 5px;
   text-align: center;
+  font-weight: bold;
   font-size: 14px;
 }
 button {
