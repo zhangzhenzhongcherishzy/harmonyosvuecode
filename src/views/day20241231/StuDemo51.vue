@@ -29,7 +29,7 @@ HTTP 请求方法是客户端与服务器交互时使用的标准操作，主要
     <button @click="updateRole">更新角色</button>
     <button @click="deleteRole">删除角色</button>
     <ul>
-      <li v-for="role in roles" :key="role.id">{{ role.name }}</li>
+      <li v-for="role in roles" :key="role">{{ role }}</li>
     </ul>
   </div>
 </template>
