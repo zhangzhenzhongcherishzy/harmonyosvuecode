@@ -153,24 +153,24 @@ const puttRolesHandler = async () => {
     status: 1,
     dataScope: 2,
   });
-  axios({ method: 'PUT', url: 'http://localhost:8989/roles/110031', data: raw }).then((res) => {
+  axios({ method: 'PUT', url: 'http://localhost:8989/roles/110047', data: raw }).then((res) => {
     console.log(res.data);
-    getRolePageHandler1()
+    getRolePageHandler1();
   });
 };
 //DELETE请求
 const deleteRolesHandler = async () => {
-  axios({ method: 'DELETE', url: 'http://localhost:8989/roles/110012' }).then((res) => {
+  axios({ method: 'DELETE', url: 'http://localhost:8989/roles/23563' }).then((res) => {
     console.log(res.data);
-    getRolePageHandler1()
+    getRolePageHandler1();
   });
 };
 //PATCH请求
 const patchRolesHandler = async () => {
-  axios({ method: 'PATCH', url: 'http://localhost:8989/roles/23588/status?status=2' }).then(
+  axios({ method: 'PATCH', url: 'http://localhost:8989/roles/23529/status?status=2' }).then(
     (res) => {
       console.log(res.data);
-      getRolePageHandler1()
+      getRolePageHandler1();
     },
   );
 };
