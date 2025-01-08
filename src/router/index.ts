@@ -432,10 +432,18 @@ const routesday20250107: Array<RouteRecordRaw> = [
     name: 'dayStuDemo58',
     component: () => import('@/views/day20250107/StuDemo58.vue'), // 按需加载
   },
+]
+// day20250108
+const routesday20250108: Array<RouteRecordRaw> = [
   {
     path: '/StuDemo59',
     name: 'dayStuDemo59',
-    component: () => import('@/views/day20250107/StuDemo59.vue'), // 按需加载
+    component: () => import('@/views/day20250108/StuDemo59.vue'), // 按需加载
+  },
+  {
+    path: '/StuDemo60',
+    name: 'dayStuDemo60',
+    component: () => import('@/views/day20250108/StuDemo60.vue'), // 按需加载
   },
 ]
 
@@ -488,6 +496,7 @@ export const routerList = [
   ...routesday20250104,
   ...routesday20250106,
   ...routesday20250107,
+  ...routesday20250108,
 ]
 //注册路由
 const router = createRouter({

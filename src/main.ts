@@ -7,6 +7,10 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';  //数据�
 import App from './App.vue'
 import router from './router'
 
+//全局中使用axios
+import axios from 'axios';
+
+
 //如果没有特别指明文件名，默认导入的是 plugins/index 文件（如果存在）
 import setupPermission from '@/plugins'
 
@@ -53,6 +57,13 @@ app.component('StuDemo4', StuDemo4)
 
 //数据持久化插件 pnpm install pinia-plugin-persistedstate
 app.use(pinia)
+
+//将axios挂载到全局
+app.config.globalProperties.$axios = axios
+/*
+提供全局 axios：在 main.ts 中，只是挂载了 axios 到 app.config.globalProperties，但并没有通过 Vue 的 provide 提供 $axios，全局通过 provide 注入 $axios
+*/
+app.provide('$axios', axios);
 
 app.use(router)
 app.use(setupPermission);

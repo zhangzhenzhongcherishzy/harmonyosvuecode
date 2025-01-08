@@ -140,16 +140,23 @@ fetch 接收两个参数：
     <h1>使用内置的 fetch API 进行请求</h1>
 
     <div>
-      <button type="button" @click="getRolePageHandler">角色分页列表</button>
-      <button type="button" @click="postRolesHandler">新增角色</button>
-      <button type="button" @click="putRolesByRoleID">put修改数据</button>
-      <button type="button" @click="deleteRolesByids">delete:删除角色</button>
-      <!-- <button type="button" @click="patchRolesStatusByRoleID">patch:更新角色状态</button> -->
+      <button @click="getRolePageHandler">角色分页列表</button>
+      <button @click="postRolesHandler">角色新增功能</button>
+      <button @click="puttRolesHandler">角色修改功能</button>
+      <button @click="deleteRolesHandler">角色删除功能</button>
+      <button @click="patchRolesHandler">角色禁用功能</button>
     </div>
-    <div>
-      <ul>
-        <li v-for="item in roles" :key="item">{{ item }}</li>
-      </ul>
+    <div v-if="roles.length>0">
+      <div v-for="item in roles" :key="item.id" class="box">
+        <span>角色ID：{{ item.id }}</span>
+        <span>角色名称:{{ item.name }}</span>
+        <span>角色编码：{{ item.code }}</span>
+        <span>排序：{{ item.sort }}</span>
+        <!-- (1-正常；0-停用) -->
+        <span>角色状态：{{ item.status }}-正常</span>
+        <!-- (0:全部数据,1:部门及子部门数据,2:本部门数据,3:本人数据) -->
+        <!-- <span>{{ item.dataScope }}</span> -->
+      </div>
     </div>
   </div>
 </template>
@@ -166,9 +173,17 @@ import {
   postRoles,
   putRolesByRoleID,
   deleteRolesByids,
+  patchRolesByids,
 } from '@/service/day20250107/StuDemo58'
-
-const roles = ref([])
+interface Role {
+  id: number;
+  name: string;
+  code: string;
+  sort: number;
+  status: number; // 确保定义了status属性
+  // dataScope?: number; // 如果有可选的属性，使用可选链?
+}
+const roles = ref<Role[]>([])
 
 const getRolePageHandler = async () => {
   const resJson = await getRolesPage()
@@ -181,6 +196,20 @@ const postRolesHandler = async () => {
   console.log(resJson, 'resJson')
 }
 
+const puttRolesHandler = async () => {
+  const resJson = await putRolesByRoleID()
+  console.log(resJson)
+}
+
+const deleteRolesHandler = async () => {
+  const resJson = await deleteRolesByids()
+  console.log(resJson)
+}
+
+const patchRolesHandler = async () => {
+  const resJson = await patchRolesByids()
+  console.log(resJson)
+}
 //GET（获取资源）详细步骤
 // import { onMounted, ref } from 'vue'
 // const roles = ref([])
@@ -254,3 +283,19 @@ const postRolesHandler = async () => {
 //   await fetchGetRolesList()
 // })
 </script>
+<style lang="scss" scoped>
+.box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  span {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #409eff;
+    background-color: #40e2ff;
+  }
+}
+</style>

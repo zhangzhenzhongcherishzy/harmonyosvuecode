@@ -35,6 +35,7 @@ export default defineConfig({
         'src/views/day20250104',
         'src/views/day20250106',
         'src/views/day20250107',
+        'src/views/day20250108',
       ], // 指定路由文件所在的目录
       // routesFolder: 'src/views', // 指定路由文件所在的目录
       extensions: ['.vue', '.jsx'],
@@ -94,6 +95,12 @@ export default defineConfig({
         rewrite: (path) => path.replace(new RegExp('^/sse'), ''),
       },
     },
+    // proxy: {
+    //   '/api': {
+    //     target: 'http://192.168.20.213:8989',
+    //     changeOrigin: true,
+    //   },
+    // },
   },
   /*-----------------------------------------配置启动服务结束，热更新---------------------------------------------- */
 })
