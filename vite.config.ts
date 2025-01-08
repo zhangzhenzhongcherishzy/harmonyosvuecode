@@ -97,7 +97,7 @@ export default defineConfig({
     },
     // proxy: {
     //   '/api': {
-    //     target: 'http://192.168.20.213:8989',
+    //     target: 'http://localhost:8989',
     //     changeOrigin: true,
     //   },
     // },

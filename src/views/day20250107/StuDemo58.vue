@@ -140,11 +140,11 @@ fetch 接收两个参数：
     <h1>使用内置的 fetch API 进行请求</h1>
 
     <div>
-      <button @click="getRolePageHandler">角色分页列表</button>
-      <button @click="postRolesHandler">角色新增功能</button>
-      <button @click="puttRolesHandler">角色修改功能</button>
-      <button @click="deleteRolesHandler">角色删除功能</button>
-      <button @click="patchRolesHandler">角色禁用功能</button>
+      <button  class="btn-id" @click="getRolePageHandler">角色分页列表</button>
+      <button  class="btn-id" @click="postRolesHandler">角色新增功能</button>
+      <button  class="btn-id" @click="puttRolesHandler">角色修改功能</button>
+      <button  class="btn-id" @click="deleteRolesHandler">角色删除功能</button>
+      <button  class="btn-id" @click="patchRolesHandler">角色禁用功能</button>
     </div>
     <div v-if="roles.length>0">
       <div v-for="item in roles" :key="item.id" class="box">
@@ -167,7 +167,7 @@ export default {
 </script>
 <script lang="ts" setup>
 //GET POST（请求封装操作）
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import {
   getRolesPage,
   postRoles,
@@ -187,29 +187,32 @@ const roles = ref<Role[]>([])
 
 const getRolePageHandler = async () => {
   const resJson = await getRolesPage()
-  console.log(resJson, 'resJson')
   roles.value = resJson.data.list
 }
 
 const postRolesHandler = async () => {
   const resJson = await postRoles()
-  console.log(resJson, 'resJson')
+  getRolePageHandler()
 }
 
 const puttRolesHandler = async () => {
   const resJson = await putRolesByRoleID()
-  console.log(resJson)
+  getRolePageHandler()
 }
 
 const deleteRolesHandler = async () => {
   const resJson = await deleteRolesByids()
-  console.log(resJson)
+  getRolePageHandler()
 }
 
 const patchRolesHandler = async () => {
   const resJson = await patchRolesByids()
-  console.log(resJson)
+  getRolePageHandler()
 }
+//挂在阶段更新数据
+onMounted(() => {
+  getRolePageHandler()
+})
 //GET（获取资源）详细步骤
 // import { onMounted, ref } from 'vue'
 // const roles = ref([])
@@ -284,6 +287,11 @@ const patchRolesHandler = async () => {
 // })
 </script>
 <style lang="scss" scoped>
+.btn-id{
+  padding: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
 .box {
   width: 100%;
   display: flex;
@@ -292,7 +300,8 @@ const patchRolesHandler = async () => {
   flex-wrap: wrap;
   span {
     margin: 10px;
-    padding: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
     border-radius: 10px;
     border: 2px solid #409eff;
     background-color: #40e2ff;

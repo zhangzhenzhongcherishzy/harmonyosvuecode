@@ -62,7 +62,8 @@
         <RouterLink to="/StuDemo57">Pinia进阶</RouterLink>
         <RouterLink to="/StuDemo58">使用内置的fetchAPI进行请求</RouterLink>
         <RouterLink to="/StuDemo59">axios安装和使用</RouterLink>
-        <RouterLink to="/StuDemo59">axios封装</RouterLink>
+        <RouterLink to="/StuDemo60">axios封装</RouterLink>
+        <RouterLink to="/StuDemo61">axios封装TS版</RouterLink>
       </nav>
     </div>
   </header>
