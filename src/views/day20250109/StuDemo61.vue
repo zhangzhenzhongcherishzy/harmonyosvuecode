@@ -130,7 +130,7 @@
 
 <script lang="ts">
 export default {
-  name: 'dayStuDemo60',
+  name: 'dayStuDemo61',
 }
 </script>
 

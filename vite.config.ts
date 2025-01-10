@@ -8,6 +8,11 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 import VueRouter from 'unplugin-vue-router/vite' //npm/cnpm/pnpm install -D unplugin-vue-router
 
+//element-plus  按需导入配置
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -36,6 +41,8 @@ export default defineConfig({
         'src/views/day20250106',
         'src/views/day20250107',
         'src/views/day20250108',
+        'src/views/day20250109',
+        'src/views/day20250110',
       ], // 指定路由文件所在的目录
       // routesFolder: 'src/views', // 指定路由文件所在的目录
       extensions: ['.vue', '.jsx'],
@@ -43,6 +50,23 @@ export default defineConfig({
     vue(),
     vueJsx(),
     vueDevTools(),
+    //element-plus  按需导入使用
+    AutoImport({
+      imports: ['vue'], // 自动导入 vue 中的函数
+      dts: true, // 自动生成 `auto-imports.d.ts` 类型声明文件
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+      // resolvers: [
+      //   (name) => {
+      //     if (name.startsWith('El')) {
+      //       return { name, from: 'element-plus' } // 按需引入 Element Plus 组件
+      //     }
+      //   },
+      // ],
+      dts: true, // 自动生成类型声明
+    }),
   ],
   resolve: {
     alias: {

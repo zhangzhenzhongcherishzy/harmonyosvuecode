@@ -191,33 +191,6 @@ a:hover,
 a:active {
   color: #3de713;
 }
-
-.clearF::after {
-  content: '';
-  height: 0;
-  visibility: hidden;
-  display: block;
-  clear: both;
-}
-ul::after {
-  content: '';
-  height: 0;
-  visibility: hidden;
-  display: block;
-  clear: both;
-}
-ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-li {
-  float: left;
-  margin: 5px 10px;
-  padding: 5px;
-  border: 3px solid #ff6700;
-  border-radius: 10px;
-}
 .fl {
   float: left;
 }

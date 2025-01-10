@@ -2,14 +2,14 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "types": ["vite/client", "vite-plugin-pages"], // 如果你使用 Vite 构建工具
+    "types": ["vite/client", "vite-plugin-pages","@element-plus/icons-vue"], // 如果你使用 Vite 构建工具
     "moduleResolution": "node",
     "jsx": "preserve", //确保支持 JSX
     "jsxImportSource": "vue", // 指定 Vue 的 JSX 解析
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
   },
   "files": [],
   "references": [

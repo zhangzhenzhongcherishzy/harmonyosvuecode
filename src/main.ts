@@ -4,6 +4,13 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';  //数据持久化插件 pnpm install pinia-plugin-persistedstate
 
+//导入element-plus
+// import ElementPlus from 'element-plus'
+// import 'element-plus/dist/index.css'
+
+//导入element-plus icon
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+
 import App from './App.vue'
 import router from './router'
 
@@ -52,6 +59,14 @@ app.component('MyComponent3', {
 })
 //注册全局组件StuDemo4
 app.component('StuDemo4', StuDemo4)
+
+//使用element-plus
+// app.use(ElementPlus)
+
+//导入使用element-plus icon
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component)
+}
 
 // app.use(createPinia())
 

@@ -36,3 +36,6 @@ declare module '*.jsx' {
   export default component
 }
 /*-------------新增以jsx文件结尾的文件声明文件配置end------------*/
+
+declare module '@element-plus/icons-vue';
+

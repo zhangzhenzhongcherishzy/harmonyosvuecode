@@ -454,6 +454,26 @@ const routesday20250109: Array<RouteRecordRaw> = [
     component: () => import('@/views/day20250109/StuDemo61.vue'), // 按需加载
   },
 ]
+// day20250110
+const routesday20250110: Array<RouteRecordRaw> = [
+  {
+    path: '/StuDemo62',
+    name: 'dayStuDemo62',
+    component: () => import('@/views/day20250110/StuDemo62.vue'), // 按需加载
+  },
+  {
+    path: '/StuDemo63',
+    name: 'dayStuDemo63',
+    component: () => import('@/views/day20250110/StuDemo63.vue'), // 按需加载
+  },
+  {
+    path: '/StuDemo64',
+    name: 'dayStuDemo64',
+    component: () => import('@/views/day20250110/StuDemo64.vue'), // 按需加载
+  },
+]
+
+
 //配置主页
 import HomeView from '@/views/HomeView.vue'
 //配置登录页
@@ -505,6 +525,7 @@ export const routerList = [
   ...routesday20250107,
   ...routesday20250108,
   ...routesday20250109,
+  ...routesday20250110,
 ]
 //注册路由
 const router = createRouter({
