@@ -53,18 +53,18 @@ button:hover {
   border: 2px solid #0c72b1;
   background-color: #0c72b1;
 }
-input {
-  border: none;
-  width: 280px;
-  height: 30px;
-  border-radius: 15px;
-  line-height: 30px;
-  font-size: 15px;
-  color: white;
-  padding-left: 2rem;
-  background-color: #409eff;
-  margin: 5px;
-}
+// input {
+//   border: none;
+//   width: 280px;
+//   height: 30px;
+//   border-radius: 15px;
+//   line-height: 30px;
+//   font-size: 15px;
+//   color: white;
+//   padding-left: 2rem;
+//   background-color: #409eff;
+//   margin: 5px;
+// }
 p {
   padding: 10px;
   font-size: 14px;
@@ -73,12 +73,13 @@ p {
   background-color: skyblue;
 }
 #wrap {
-  color: white;
+  // color: white;
   font-size: 20px;
   width: 100%;
   text-align: center;
   h1 {
-    color: white;
+    // color: white;
+    padding-bottom: 10px;
   }
   img {
     width: 300px;
@@ -101,18 +102,18 @@ ul::after {
   display: block;
   clear: both;
 }
-// ul {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-// li {
-//   float: left;
-//   margin: 5px 10px;
-//   padding: 5px;
-//   border: 3px solid #ff6700;
-//   border-radius: 10px;
-// }
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+li {
+  float: left;
+  margin: 5px 10px;
+  padding: 5px;
+  border: 3px solid #ff6700;
+  border-radius: 10px;
+}
 //路由文件选中a标签的背景颜色
 .router-link-active {
   color: #3de713 !important;

@@ -54,7 +54,7 @@ function setStorage() {
   //把数组转成字符串
   const arrStr = arr.join('&')
   //存储
-  localStorage.setItem('token', arrStr)
+  localStorage.setItem('users', arrStr)
 }
 </script>
 

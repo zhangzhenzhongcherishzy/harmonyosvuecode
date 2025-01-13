@@ -20,11 +20,11 @@ import router from '@/router'
 import { ref } from 'vue'
 //账号密码变量
 const user = ref('')
-const pass = ref('')
+const pass = ref('') 
 //注册功能
 const Login = () => {
   // 获取本地储存
-  const item = localStorage.getItem('token')
+  const item = localStorage.getItem('users')
   if (item !== null) {
     const array = JSON.parse(item)
     if (user.value == '' || pass.value == '') {

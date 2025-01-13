@@ -8,6 +8,9 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';  //数据�
 // import ElementPlus from 'element-plus'
 // import 'element-plus/dist/index.css'
 
+import 'element-plus/theme-chalk/dark/css-vars.css'
+import '@/styles/element/dark/css-vars.scss'
+
 //导入element-plus icon
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 

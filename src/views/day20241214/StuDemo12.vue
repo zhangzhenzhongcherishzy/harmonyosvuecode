@@ -52,7 +52,7 @@ function clean() {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use "@/assets/common.scss";
 
 body {

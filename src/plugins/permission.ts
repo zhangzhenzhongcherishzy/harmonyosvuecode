@@ -8,7 +8,7 @@ export const setupPermission = () => {
   // whiteList 定义了白名单路由，例如 /LoginView，无需权限即可访问。
   const whiteList= ['/LoginView','/RegisterView']
   router.beforeEach( async (to:RouteLocationNormalized,from:RouteLocationNormalized,next:NavigationGuardNext) => {
-    const hastoken = localStorage.getItem('token')
+    const hastoken = localStorage.getItem('users')
     if(hastoken){
       //已登录
       if(to.path == '/LoginView'){

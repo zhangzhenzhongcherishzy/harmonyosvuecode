@@ -66,7 +66,7 @@ const toggleDarkMode = useToggle(isDark); // 切换暗模式  useToggle 是 @vue
 const toggleDarkModeHandler = () => toggleDarkMode();
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 /* 示例暗模式样式 */
 body {
   transition:

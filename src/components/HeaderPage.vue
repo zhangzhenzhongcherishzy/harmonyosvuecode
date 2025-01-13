@@ -66,7 +66,6 @@
         <RouterLink to="/StuDemo61">axios封装TS版</RouterLink>
         <RouterLink to="/StuDemo62">element-plus安装</RouterLink>
         <RouterLink to="/StuDemo63">element-plus安装使用</RouterLink>
-        <RouterLink to="/StuDemo64">element-plus安装使用1</RouterLink>
       </nav>
     </div>
   </header>

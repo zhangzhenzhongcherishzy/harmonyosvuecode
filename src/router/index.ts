@@ -405,7 +405,7 @@ const routesday20250104: Array<RouteRecordRaw> = [
         path: '/StuDemo55/:id/:title/:content',
         name: 'StuDemo55Son1',
         component: () => import('@/views/day20250104/components/StuDemo55Son1.vue'), // 按需加载
-        props:true
+        props: true,
       },
     ],
   },
@@ -439,7 +439,7 @@ const routesday20250108: Array<RouteRecordRaw> = [
     path: '/StuDemo59',
     name: 'dayStuDemo59',
     component: () => import('@/views/day20250108/StuDemo59.vue'), // 按需加载
-  }
+  },
 ]
 // day20250109
 const routesday20250109: Array<RouteRecordRaw> = [
@@ -465,14 +465,8 @@ const routesday20250110: Array<RouteRecordRaw> = [
     path: '/StuDemo63',
     name: 'dayStuDemo63',
     component: () => import('@/views/day20250110/StuDemo63.vue'), // 按需加载
-  },
-  {
-    path: '/StuDemo64',
-    name: 'dayStuDemo64',
-    component: () => import('@/views/day20250110/StuDemo64.vue'), // 按需加载
-  },
+  }
 ]
-
 
 //配置主页
 import HomeView from '@/views/HomeView.vue'
@@ -482,6 +476,7 @@ import LoginView from '@/views/LoginView.vue'
 import RegisterView from '@/views/RegisterView.vue'
 //管理路由表
 export const routerList = [
+  ...routesday20250110,
   //配置主页
   {
     path: '/',
@@ -525,7 +520,6 @@ export const routerList = [
   ...routesday20250107,
   ...routesday20250108,
   ...routesday20250109,
-  ...routesday20250110,
 ]
 //注册路由
 const router = createRouter({
@@ -535,7 +529,7 @@ const router = createRouter({
 
 //配置全局守卫
 // router.beforeEach((to, from, next) => {
-//   const istrue = localStorage.getItem('token');
+//   const istrue = localStorage.getItem('users');
 //   if (istrue) {
 //     //已经登录
 //     if (to.path === '/LoginView') {

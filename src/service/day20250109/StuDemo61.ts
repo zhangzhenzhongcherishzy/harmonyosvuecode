@@ -43,6 +43,11 @@ instance.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
     //设置请求头
     config.headers.set('Content-Type', 'application/json')
+
+    // 从localStore 里获取 token 设置到header头
+    const token = localStorage.getItem('token')
+    config.headers.set('Authorization', token)
+
     return config
   },
   (error: AxiosError) => {
@@ -71,7 +76,7 @@ instance.interceptors.response.use(
 )
 
 // 服务请求
-export const service = <T = unknown>(config: AxiosRequestConfigEx):Promise<ResType<T>> => {
+export const service = <T = unknown>(config: AxiosRequestConfigEx): Promise<ResType<T>> => {
   //instance.request: 使用 axios 的实例方法发送请求
   return instance
     .request<ResType<T>>(config)
@@ -186,4 +191,80 @@ export const delRole = (ids: string) => {
     })
     .then((response) => console.log('Deleted:', response.data))
     .catch((error) => console.error(error))
+}
+
+export interface IUserLoginInfo {
+  /**
+   * 密码
+   */
+  password: string
+  /**
+   * 用户名
+   */
+  username: string
+}
+
+/**
+ * 登录
+ * @param data
+ * @returns
+ */
+export const apiLogin = (data: IUserLoginInfo) => {
+  return service<string>({
+    method: 'post',
+    url: '/auth/login',
+    data
+  })
+}
+
+export interface IUsersMeData {
+  /**
+   * 头像
+   */
+  avatar: string
+  create_by: number
+  dept_id: number
+  /**
+   * 邮箱
+   */
+  email: string
+  /**
+   * 性别
+   */
+  gender: number
+  id: number
+  is_deleted: number
+  /**
+   * 手机号
+   */
+  mobile: string
+  /**
+   * 昵称
+   */
+  nickname: string
+  /**
+   * 密码
+   */
+  password: string
+  /**
+   * 状态
+   */
+  status: number
+  update_by: number
+  /**
+   * 用户名
+   */
+  username: string
+}
+
+/**
+ * 登录
+ * @param data
+ * @returns
+ */
+export const apiUsersMe = () => {
+  return service<IUsersMeData>({
+    method: 'get',
+    url: '/users/me',
+  })
 }
